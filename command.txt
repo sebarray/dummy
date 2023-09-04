@@ -1,7 +1,15 @@
 Para generar el código del servicio:
 
-protoc --go_out=. --go-grpc_out=. user_service.proto
+protoc --go_out=. --go-grpc_out=. dummypb.proto
 
 Para generar el código de los mensajes:
 
-protoc --go_out=. user_service.proto
+protoc --go_out=. dummypb.proto
+
+protoc
+https://github.com/protocolbuffers/protobuf/releases
+
+plugin
+El siguiente paso es instalar el soporte de protocol buffers con Go. https://protobuf.dev/reference/go/go-generated/
+
+go install google.golang.org/protobuf/cmd/protoc-gen-go
