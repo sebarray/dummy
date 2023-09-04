@@ -1,0 +1,7 @@
+Para generar el código del servicio:
+
+protoc --go_out=. --go-grpc_out=. user_service.proto
+
+Para generar el código de los mensajes:
+
+protoc --go_out=. user_service.proto

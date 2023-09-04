@@ -1,0 +1,43 @@
+syntax= "proto3";
+
+package dummy;
+
+option go_package="dummy/dummypb";
+
+message DummyRequest{
+    string Name= 1;  
+}
+
+message DummyResponse{
+    string Name= 1;  
+}
+
+service DummyService{
+    rpc Hello (DummyRequest)returns(DummyResponse);
+}
+
+
+
+// message PmcRequest {  
+//     string rut =1;
+//     string processingCode=2;
+//     string transactionAmount=3;
+//     string transmisionDateTime=4;
+//     string systemTraceAuditNumber=5;
+//     string localTime=6;
+//     string localDate=7;
+//     string ExpirationDate=8;
+//     string DateSettlement=9;
+//     string BussinessType=10;
+//     string AcquirerInstitutionCountryCode=11;
+//     string PointOfService=12;
+//     string PointOfServiceConditionCode=13;
+//     string AcquirerInstitutionIdCode=14;
+//     string ForwardingInstitutionCode=15;
+//     string RetrivalReferenceNumber=16;
+//     string CardAcceptorTerminalId=17;
+//     string CardAcceptorId=18;
+//     string CardAcceptorNameAndLocation=19;
+//     string AdditionalData=20;
+//     string CurrencyCodeTransaction=21;
+// }
